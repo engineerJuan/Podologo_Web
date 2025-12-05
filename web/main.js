@@ -1,13 +1,9 @@
-// Inicialización cuando el DOM esté cargado
 document.addEventListener('DOMContentLoaded', function() {
-  // Inicializar menú móvil
-  initMobileMenu();
   
-  // Actualizar año en el footer
+  initMobileMenu();
   updateFooterYear();
 });
 
-// Menú móvil
 function initMobileMenu() {
   const menuToggle = document.getElementById('menuToggle');
   const navMenu = document.getElementById('navMenu');
@@ -20,7 +16,6 @@ function initMobileMenu() {
       icon.classList.toggle('fa-times');
     });
     
-    // Cerrar menú al hacer clic en un enlace
     const navLinks = document.querySelectorAll('.nav-link');
     navLinks.forEach(link => {
       link.addEventListener('click', function() {
@@ -32,7 +27,6 @@ function initMobileMenu() {
     });
   }
   
-  // Cambiar clase activa en navegación al hacer scroll
   window.addEventListener('scroll', function() {
     const sections = document.querySelectorAll('section');
     const navLinks = document.querySelectorAll('.nav-link');
@@ -55,7 +49,6 @@ function initMobileMenu() {
   });
 }
 
-// Actualizar año en el footer
 function updateFooterYear() {
   const yearElement = document.getElementById('currentYear');
   if (yearElement) {
